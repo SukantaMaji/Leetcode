@@ -4,6 +4,7 @@ class Solution {
         arr[i] = arr[j];
         arr[j] = temp;
     }
+    // optimal TC --> O(n)
     public void moveZeroes(int[] nums) {
         int  count = 0;
         for (int j = 0; j <nums.length ; j++) {
