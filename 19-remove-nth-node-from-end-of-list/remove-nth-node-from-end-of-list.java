@@ -13,10 +13,14 @@ class Solution {
         // Optimal --> Using fast & Slow pointer
         ListNode slow = head;
         ListNode fast = head;
+        // Move ahead fast pointer upto n
         for(int i=1; i<=n; i++){
             fast = fast.next;
         }
+        // if fast == null means we have to dlt head
+        // dlt head formula head = head.next
         if(fast == null) return head.next;
+        // slow & fasr goes together
         while(fast.next != null){
             slow = slow.next;
             fast = fast.next;
