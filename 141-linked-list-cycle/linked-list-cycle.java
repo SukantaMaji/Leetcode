@@ -7,6 +7,7 @@ public class Solution {
             fast = fast.next.next;
             if(slow==fast) return true;
         }
+        // if fast reaches null or fast.next reaches null means there is not cycle
         return false;
 
     }
