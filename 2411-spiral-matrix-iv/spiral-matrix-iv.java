@@ -7,25 +7,25 @@ class Solution {
         }
         int minr = 0, maxr = m-1, minc = 0, maxc = n-1;
         while(head!=null){
-            // print 1st row (Left->Right)
+            // Fill 1st row (Left->Right)
             for(int j=minc; j<=maxc; j++){
                 if(head==null) break;
                 ans[minr][j] = head.val;
                 head = head.next;
             } minr++;
-            // print last column (Up->Down)
+            // Fill last column (Up->Down)
             for(int i=minr; i<=maxr; i++){
                 if(head==null) break;
                 ans[i][maxc] = head.val;
                 head = head.next;
             } maxc--;
-            // print last row (Rigth->Left)
+            // Fill last row (Rigth->Left)
             for(int j=maxc; j>=minc; j--){
                 if(head==null) break;
                 ans[maxr][j] = head.val;
                 head = head.next;
             } maxr--;
-            // print 1st column (Down->Up)
+            // Fill 1st column (Down->Up)
             for(int i=maxr; i>=minr; i--){
                 if(head==null) break;
                 ans[i][minc] = head.val;
