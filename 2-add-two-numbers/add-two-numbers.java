@@ -29,8 +29,8 @@ class Solution {
 
       }
       // Handle carry if carry still > 0
-      if(carry == 1){
-        ListNode newnode = new ListNode(1);
+      if(carry > 0){
+        ListNode newnode = new ListNode(carry);
         temp.next = newnode;
         temp = temp.next;
       }
