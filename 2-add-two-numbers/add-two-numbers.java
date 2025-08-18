@@ -19,8 +19,9 @@ class Solution {
         temp = temp.next;
 
         // Store 1st digit of sum into carry(if greater than 9)
-        if(sum > 9) carry = 1;
-        else carry = 0;
+        // if(sum > 9) carry = 1;
+        // else carry = 0;
+        carry = sum / 10;
           
 
         if(l1!=null) l1 = l1.next;
