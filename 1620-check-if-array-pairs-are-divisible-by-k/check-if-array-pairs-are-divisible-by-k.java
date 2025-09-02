@@ -3,7 +3,7 @@ class Solution {
         HashMap<Integer, Integer> map = new HashMap<>();
         for(int i=0; i<arr.length; i++){
             int ele = arr[i]%k;
-            if(ele < 0) ele += k;
+            if(ele < 0) ele += k; // Handling Negative numbers
 
             if(map.containsKey(ele)){
                 int freq = map.get(ele);
@@ -12,6 +12,7 @@ class Solution {
             else map.put(ele, 1);                           
         }
 
+        // Handling 0s
         if(map.containsKey(0)){
             if(map.get(0)%2 != 0) return false;
             map.remove(0);
