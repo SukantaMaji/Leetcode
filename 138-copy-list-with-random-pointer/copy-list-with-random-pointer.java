@@ -41,7 +41,6 @@ class Solution {
             t1 = t1.next;
             temp = temp.next;
            
-
             temp.next = t2;
             t2 = t2.next;
             temp = temp.next;
