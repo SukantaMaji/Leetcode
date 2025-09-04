@@ -16,10 +16,10 @@ class Node {
 class Solution {
     public Node deepCopy(Node head){
         if(head == null) return null;
-       Node h2 = new Node(head.val);
-       Node t1 = head.next;
-       Node t2 = h2;
-       while(t1!=null){
+        Node h2 = new Node(head.val);
+        Node t1 = head.next;
+        Node t2 = h2;
+        while(t1!=null){
             Node temp = new Node(t1.val);
             t2.next = temp;
             t1 = t1.next;
